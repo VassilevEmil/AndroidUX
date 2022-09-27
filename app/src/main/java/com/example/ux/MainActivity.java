@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Snackbar snackbar = Snackbar.make(coordinatorLayout, "Message", Snackbar.LENGTH_LONG);
+                snackbar.setAction("Undo", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(MainActivity.this, "Messece unsent", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
                 snackbar.show();
 
             }
