@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,10 +19,24 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    RecyclerView recyclerView;
+
+    String s1[], s2[];
+    int images[] = {R.drawable.programminglanguages3, R.drawable.programminglanguages3, R.drawable.programminglanguages3, R.drawable.programminglanguages3, R.drawable.programminglanguages3, R.drawable.programminglanguages3, R.drawable.programminglanguages3, R.drawable.programminglanguages3};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        s1 = getResources().getStringArray(R.array.programminig_languages);
+        s2 = getResources().getStringArray(R.array.description);
+
+        recyclerView = findViewById(R.id.recycler);
+
+        MyAdapter myAdapter = new MyAdapter(this, s1, s2, images );
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

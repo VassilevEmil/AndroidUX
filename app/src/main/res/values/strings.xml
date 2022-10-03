@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">UX</string>
+    <string-array name="programminig_languages">
+        <item>C++</item>
+        <item>C</item>
+        <item>C#</item>
+        <item>Java</item>
+        <item>JavaScript</item>
+        <item>Kotlin</item>
+        <item>CPython</item>
+        <item>Swift</item>
+        <item>Typescript</item>
+        <item>Ruby</item>
+        <item>Assembly</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>This is description</item>
+        <item>This is description</item>
+        <item>This is description</item>
+        <item>This is description</item>
+        <item>This is description</item>
+        <item>This is description</item>
+        <item>This is description</item>
+        <item>This is description</item>
+        <item>This is description</item>
+        <item>This is description</item>
+
+
+    </string-array>
+
 </resources>
